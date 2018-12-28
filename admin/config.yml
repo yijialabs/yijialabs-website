@@ -16,7 +16,7 @@ collections:
        - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
        - { label: "Title", name: "title", widget: "string", required: true }
        - { label: "Publish Date", name: "date", widget: "datetime" }
-       - { label: "Cover Image", name: "cover_image", widget: "image" }
+       - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
        - label: "Category"
          name: "categories"
          widget: "select"
@@ -37,7 +37,7 @@ collections:
        - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
        - { label: "Title", name: "title", widget: "string", required: true }
        - { label: "Publish Date", name: "date", widget: "datetime" }
-       - { label: "Cover Image", name: "cover_image", widget: "image" }
+       - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
        - label: "Category"
          name: "categories"
          widget: "select"
@@ -58,7 +58,7 @@ collections:
        - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
        - { label: "Title", name: "title", widget: "string", required: true }
        - { label: "Publish Date", name: "date", widget: "datetime" }
-       - { label: "Cover Image", name: "cover_image", widget: "image" }
+       - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
        - label: "Category"
          name: "categories"
          widget: "select"
