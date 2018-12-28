@@ -1,0 +1,70 @@
+backend:
+    name: git-gateway
+    branch: master
+
+media_folder: "images"
+
+collections:
+  - label: "Art and Humanities"
+    name: "art_posts"
+    folder: "_posts"
+    filter: { field: 'categories', value: 'art-and-humanities' }
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+       - { label: "Title", name: "title", widget: "string", required: true }
+       - { label: "Publish Date", name: "date", widget: "datetime" }
+       - { label: "Cover Image", name: "cover_image", widget: "image" }
+       - label: "Category"
+         name: "categories"
+         widget: "select"
+         default: 'art-and-humanities'
+         options:
+           - { label: "Art and Humanities", value: 'art-and-humanities' }
+           - { label: "Data and Information", value: 'data-and-information' }
+           - { label: "Science and Technology", value 'science-and-technology' }
+       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Data and Information"
+    name: "data_posts"
+    folder: "_posts"
+    filter: { field: 'categories', value: 'data-and-information' }
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+       - { label: "Title", name: "title", widget: "string", required: true }
+       - { label: "Publish Date", name: "date", widget: "datetime" }
+       - { label: "Cover Image", name: "cover_image", widget: "image" }
+       - label: "Category"
+         name: "categories"
+         widget: "select"
+         default: 'data-and-information'
+         options:
+           - { label: "Art and Humanities", value: 'art-and-humanities' }
+           - { label: "Data and Information", value: 'data-and-information' }
+           - { label: "Science and Technology", value 'science-and-technology' }
+       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Science and Technology"
+    name: "tech_posts"
+    folder: "_posts"
+    filter: { field: 'categories', value: 'science-and-technology' }
+    sort: "date:desc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+       - { label: "Title", name: "title", widget: "string", required: true }
+       - { label: "Publish Date", name: "date", widget: "datetime" }
+       - { label: "Cover Image", name: "cover_image", widget: "image" }
+       - label: "Category"
+         name: "categories"
+         widget: "select"
+         default: 'science-and-technology'
+         options:
+           - { label: "Art and Humanities", value: 'art-and-humanities' }
+           - { label: "Data and Information", value: 'data-and-information' }
+           - { label: "Science and Technology", value 'science-and-technology' }
+       - { label: "Body", name: "body", widget: "markdown" }
