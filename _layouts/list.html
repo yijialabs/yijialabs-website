@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<header class="lh-title tc bg-moon-gray white pv4 pv5-ns mv4 mv5-ns ts">
+    <h1 class="f3 f2-ns ttc mv0">{{ page.title | default: site.title | escape }}</h1>
+</header>
+<div class="mv4 mv5-ns">
+    {{ content }}
+    <ol class="list pl0 mv4 mv5-ns">
+        {% for post in paginator.posts %}
+            <li class="mv4 mv5-ns">
+                <header class="lh-title">
+                    <p class="f6 f5-ns mb0">{{ post.date | date: "%-d %b %Y" }}</p>
+                    <h2 class="f4 f3-ns mt0"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                </header>
+                {{ post.content }}
+            </li>
+        {% endfor %}
+    </ol>
+</div>
+{% if paginator.total_pages > 1 %}
+    <div class="lh-solid mt4 mt5-ns">
+        {% if paginator.previous_page %}
+            <a class="dt center mv2 mv3-ns" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+        {% endif %}
+        {% if paginator.next_page %}
+            <a class="dt center mv2 mv3-ns" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+        {% endif %}
+    </div>
+{% endif %}

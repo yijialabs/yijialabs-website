@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {%- seo -%}
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <style>
+            html { line-height: 1; }
+            header, h1, h2, h3, h4, h5, h6  { font-family: sans-serif; font-weight: normal; }
+            h1, h2, h3, h4, h5, h6 { margin: 1.33rem 0; }
+            pre, code, kbd, samp { font-family: Inconsolata, Consolas, Monaco, monospace; }
+            pre { overflow: scroll; }
+            img { max-width: 100%; }
+            a { color: blue; }
+            .ts { text-shadow: 1px 1px 2px black; }
+        </style>
+    </head>
+    <body class="pa3 pa4-ns center flex flex-column" style="max-width: 96rem; min-height: 100vh;">
+        <div style="flex: 1;">
+            <nav class="f4-ns mb4 mb5-ns cf lh-title">
+                {% for nav_elem in site.data.nav %}
+                <a class="db fl mr3 mr4-ns" href="{{ nav_elem.url | relative_url }}">{{ nav_elem.title | escape }}</a>
+                {% endfor %}
+            </nav>
+            <main class="measure-wide lh-copy center mt4 mt5-ns f4-ns">
+                {{ content }}
+            </main>
+        </div>
+        <footer class="mt4 mt5-ns mb3 f6 f5-ns lh-title">
+            All content copyright YiJia Labs © 2018 • All&nbsp;rights&nbsp;reserved.
+        </footer>
+    </body>
+</html>

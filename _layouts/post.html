@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/BlogPosting" class="mb4 mb5-ns">
+    <header class="lh-title tc bg-moon-gray white pv4 pv5-ns mv4 mv5-ns ts">
+        <h1 class="ttc f3 f2-ns mv0" itemprop="name headline">{{ page.title | escape }}</h1>
+        {% if page.author %}
+        <p class="mv0" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author | escape }}</span></p>
+        {% endif %}
+        <p class="mv0"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b %Y" }}</time></p>
+    </header>
+    {{ content }}
+</article>
