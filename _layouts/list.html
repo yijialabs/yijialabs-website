@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<header class="lh-title tc bg-moon-gray white pv4 pv5-ns mv4 mv5-ns ts">
+<header
+    class="lh-title tc bg-moon-gray white pv4 pv5-ns mv4 mv5-ns ts"{% if page.cover_image %}
+    style="background: center / cover url({{ page.cover_image }});"{% endif %}>
     <h1 class="f3 f2-ns ttc mv0">{{ page.title | default: site.title | escape }}</h1>
 </header>
 <div class="mv4 mv5-ns">
