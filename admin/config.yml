@@ -71,6 +71,18 @@ collections:
   - label: "Pages"
     name: "pages"
     files: 
+      - label: "Home Page"
+        name: "home"
+        file: "index.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "list" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - label: "Pagination"
+            name: "pagination"
+            widget: "hidden"
+            default: { enabled: true }
       - label: "About Page"
         name: "about"
         file: "about.md"
@@ -83,10 +95,10 @@ collections:
         name: "art_post_index"
         file: "art-and-humanities.md"
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "list" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
           - label: "Pagination"
             name: "pagination"
             widget: "hidden"
@@ -95,10 +107,10 @@ collections:
         name: "data_post_index"
         file: "data-and-information.md"
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "list" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
           - label: "Pagination"
             name: "pagination"
             widget: "hidden"
@@ -107,10 +119,10 @@ collections:
         name: "tech_post_index"
         file: "science-and-technology.md"
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "list" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
           - label: "Pagination"
             name: "pagination"
             widget: "hidden"
