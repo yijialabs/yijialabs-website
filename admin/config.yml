@@ -68,3 +68,50 @@ collections:
            - { label: "Data and Information", value: 'data-and-information' }
            - { label: "Science and Technology", value 'science-and-technology' }
        - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Pages"
+    name: "pages"
+    files: 
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Art Post Index"
+        name: "art_post_index"
+        file: "art-and-humanities.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Pagination"
+            name: "pagination"
+            widget: "hidden"
+            default: { enabled: true, category: "art-and-humanities" }
+      - label: "Data Post Index"
+        name: "data_post_index"
+        file: "data-and-information.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Pagination"
+            name: "pagination"
+            widget: "hidden"
+            default: { enabled: true, category: "data-and-information" }
+      - label: "Tech Post Index"
+        name: "tech_post_index"
+        file: "science-and-technology.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Pagination"
+            name: "pagination"
+            widget: "hidden"
+            default: { enabled: true, category: "science-and-technology" }
