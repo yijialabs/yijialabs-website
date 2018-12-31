@@ -1,7 +1,7 @@
 ---
 layout: list
 title: YiJia Labs
-cover_image: /images/background-2462433_1920.jpg
+cover_image: ''
 pagination:
   enabled: true
 ---
