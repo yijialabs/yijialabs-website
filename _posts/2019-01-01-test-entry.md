@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Entry
+title: Knowledge-Based Systems
 date: 2018-01-01T17:00:00.000Z
 cover_image: /images/background-2462433_1920.jpg
 categories: data-and-information
