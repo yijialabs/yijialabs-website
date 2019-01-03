@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: home
 title: YiJia Labs
 cover_image: ''
 pagination:
