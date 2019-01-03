@@ -19,12 +19,12 @@
     </head>
     <body class="pa3 pa4-ns center flex flex-column" style="max-width: 96rem; min-height: 100vh;">
         <div style="flex: 1;">
-            <nav class="f4-ns mb4 mb5-ns cf lh-title">
+            <nav class="f4-ns mb3 mb4-ns cf lh-title">
                 {% for nav_elem in site.data.nav %}
                 <a class="db fl mr3 mr4-ns" href="{{ nav_elem.url | relative_url }}">{{ nav_elem.title | escape }}</a>
                 {% endfor %}
             </nav>
-            <main class="measure-wide lh-copy center mt4 mt5-ns f4-ns">
+            <main class="lh-copy mt3 mt4-ns f4-ns">
                 {{ content }}
             </main>
         </div>
