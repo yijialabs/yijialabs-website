@@ -4,7 +4,7 @@ layout: default
 <header
     class="lh-title tc bg-moon-gray white pv6 pv7-ns mv3 mv4-ns ts"{% if page.cover_image and page.cover_image != "" %}
     style="background: center / cover url({{ page.cover_image }});"{% endif %}>
-    <h1 class="f3 f2-ns ttc mv0">{{ page.title | default: site.title | escape }}</h1>
+    <h1 class="f2 f1-ns ttc mv0 b">{{ page.title | default: site.title | escape }}</h1>
 </header>
 <div class="mv4 mv5-ns measure-wide lh-copy center mt4 mt5-ns f4-ns">
     {{ content }}
